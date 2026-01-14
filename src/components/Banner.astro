@@ -1,0 +1,81 @@
+---
+interface Props {
+  message?: string;
+}
+
+const { message = "#BoletínEscazú: Avances, alertas y desafíos en América Latina y el Caribe | Democracia Ambiental" } = Astro.props;
+---
+
+<banner-component data-message={message}>
+  <div class="banner-container">
+    <p class="banner-text">
+      <span class="banner-highlight">#BoletínEscazú: </span>
+      {message}
+    </p>
+    <button class="banner-close" aria-label="Cerrar banner">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</banner-component>
+
+<style>
+  .banner-container {
+    @apply flex items-center justify-between bg-cafeoscuro w-full h-11 font-bold text-sm text-white px-4;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+  }
+
+  .banner-container.hidden {
+    @apply opacity-0 -translate-y-full;
+    visibility: hidden;
+  }
+
+  .banner-container:not(.hidden) {
+    @apply opacity-100 translate-y-0;
+    visibility: visible;
+  }
+
+  .banner-text {
+    @apply text-left;
+  }
+
+  .banner-highlight {
+    @apply text-amarillo;
+  }
+
+  .banner-close {
+    @apply flex items-center justify-center p-1 hover:bg-cafeoscuro/80 rounded transition-colors;
+  }
+</style>
+
+<script>
+  class BannerComponent extends HTMLElement {
+    constructor() {
+      super();
+      const container = this.querySelector('.banner-container');
+      const closeBtn = this.querySelector('.banner-close');
+
+      closeBtn?.addEventListener('click', () => {
+        container?.classList.add('hidden');
+        localStorage.setItem('banner-closed', 'true');
+      });
+    }
+  }
+
+  customElements.define('banner-component', BannerComponent);
+</script>
+
+<style is:global>
+  .bg-cafeoscuro {
+    background-color: #4a3728;
+  }
+
+  .text-amarillo {
+    color: #f59e0b;
+  }
+
+  .hover\:bg-cafeoscuro\/80:hover {
+    background-color: rgb(74 55 40 / 0.8);
+  }
+</style>
