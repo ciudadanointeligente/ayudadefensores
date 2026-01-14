@@ -26,6 +26,13 @@
   }
 }
 
+@theme {
+  --color-cafeoscuro: #655846;
+  --color-cafemedio: #D06B28;
+  --color-verde: #818B3E;
+  --color-amarillo: #F7CB67;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
