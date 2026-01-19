@@ -1,99 +1,25 @@
----
-interface Props {
-  message?: string;
-}
+<div
+  x-data="{ closed: false }"
+  x-show="!closed"
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="opacity-0 -translate-y-full"
+  x-transition:enter-end="opacity-100 translate-y-0"
+  x-transition:leave="transition ease-in duration-300"
+  x-transition:leave-start="opacity-100 translate-y-0"
+  x-transition:leave-end="opacity-0 -translate-y-full"
+  class="flex items-center justify-between bg-cafeoscuro w-full h-11 font-bold text-sm text-white px-4"
+>
+  <p class="text-xs text-center md:text-sm md:pl-22">
+    <span class="text-amarillo">#BoletínEscazú: </span>Avances, alertas y desafíos en América Latina y el Caribe | Democracia Ambiental
+  </p>
+  <button
+    @click="closed = true"
+    class="flex items-center justify-center p-1 hover:bg-cafeoscuro/80 rounded transition-colors"
+    aria-label="Cerrar banner"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
 
-const { message = "#BoletínEscazú: Avances, alertas y desafíos en América Latina y el Caribe | Democracia Ambiental" } = Astro.props;
----
-
-<banner-component data-message={message}>
-  <div class="banner-container">
-    <p class="banner-text">
-      <span class="banner-highlight">#BoletínEscazú: </span>
-      {message}
-    </p>
-    <button class="banner-close" aria-label="Cerrar banner">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-</banner-component>
-
-<style>
-  .banner-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 44px;
-    font-weight: 700;
-    font-size: 14px;
-    color: white;
-    padding: 0 16px;
-    background-color: #4a3728;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
-  }
-
-  .banner-container.hidden {
-    opacity: 0;
-    transform: translateY(-100%);
-    visibility: hidden;
-  }
-
-  .banner-container:not(.hidden) {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-
-  .banner-text {
-    text-align: left;
-  }
-
-  .banner-highlight {
-    color: #f59e0b;
-  }
-
-  .banner-close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  .banner-close:hover {
-    background-color: rgb(74 55 40 / 0.8);
-  }
-
-  .icon-close {
-    width: 20px;
-    height: 20px;
-  }
-</style>
-
-<script>
-  class BannerComponent extends HTMLElement {
-    constructor() {
-      super();
-      const container = this.querySelector('.banner-container');
-      const closeBtn = this.querySelector('.banner-close');
-
-      if (localStorage.getItem('banner-closed') === 'true' && container) {
-        container.classList.add('hidden');
-      }
-
-      closeBtn?.addEventListener('click', () => {
-        container?.classList.add('hidden');
-        localStorage.setItem('banner-closed', 'true');
-      });
-    }
-  }
-
-  customElements.define('banner-component', BannerComponent);
-</script>

@@ -4,6 +4,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --color-cafeoscuro: #655846;
+  --color-cafemedio: #D06B28;
+  --color-verde: #818B3E;
+  --color-amarillo: #F7CB67;
+}
+
+@theme {
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
@@ -24,13 +31,6 @@
       height: 0;
     }
   }
-}
-
-@theme {
-  --color-cafeoscuro: #655846;
-  --color-cafemedio: #D06B28;
-  --color-verde: #818B3E;
-  --color-amarillo: #F7CB67;
 }
 
 @theme inline {

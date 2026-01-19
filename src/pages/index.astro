@@ -3,5 +3,16 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Inicio">
-  <p>Inicio de sitio</p>
+  <section class="flex w-full h-[350px] items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover">
+    <div class="text-center space-y-4">
+      <p class="text-sm md:text-base text-gray-600">Texto opcional arriba</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Cabecera Principal</h1>
+      <p class="text-base md:text-lg text-gray-700">Subtítulo descriptivo</p>
+      <div class="pt-4">
+        <button class="border-b-2 border-blue-600 text-blue-600 hover:text-blue-800 font-medium pb-1 transition-colors">
+          Acción CTA
+        </button>
+      </div>
+    </div>
+  </section>
 </Layout>
