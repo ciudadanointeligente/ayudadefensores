@@ -3,16 +3,21 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Inicio">
-  <section class="flex w-full h-[350px] items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover">
-    <div class="text-center space-y-4">
-      <p class="text-sm md:text-base text-gray-600">Texto opcional arriba</p>
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Cabecera Principal</h1>
-      <p class="text-base md:text-lg text-gray-700">Subtítulo descriptivo</p>
-      <div class="pt-4">
-        <button class="border-b-2 border-blue-600 text-blue-600 hover:text-blue-800 font-medium pb-1 transition-colors">
-          Acción CTA
-        </button>
-      </div>
+  <section class="flex w-full h-50 md:h-90 items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover border-y border-cafeoscuro relative">
+    <div class="text-center">
+      <p class="text-[22px] md:text-[24px] font-normal text-cafeoscuro">Una plataforma de apoyo para</p>
+      <h1 class="text-3xl md:text-9xl font-extrabold text-cafemedio">DEFENSORES</h1>
+      <p class="text-[22px] md:text-[24px] font-semibold text-verde">ambientales en América Latina y el Caribe</p>
     </div>
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+      <button class="uppercase bg-cafeoscuro text-white font-bold px-6 py-2 rounded-full hover:bg-cafeclaro transition">
+       Busca Ayuda Ahora 
+      </button>
+    </div>
+  </section>
+  <section>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
+  <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
+</svg>
   </section>
 </Layout>

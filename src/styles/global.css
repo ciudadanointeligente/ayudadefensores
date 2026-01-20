@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/forms";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cafeoscuro: #655846;
+  --color-cafemedio: #D06B28;
+  --color-verde: #818B3E;
+  --color-amarillo: #F7CB67;
+}
+
