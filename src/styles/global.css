@@ -1,7 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/forms";
-@custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui" {
+  themes: light --default, light --preferslight;
+};
+
 
 @theme {
   --color-cafeoscuro: #655846;
@@ -23,5 +26,18 @@
 
 .animate-slide-down {
   animation: slide-down 1s ease-out;
+}
+
+@keyframes fade-white-to-verde {
+  from {
+    fill: white;
+  }
+  to {
+    fill: #818B3E;
+  }
+}
+
+.animate-fade-color {
+  animation: fade-white-to-verde 0.8s ease-out forwards;
 }
 
