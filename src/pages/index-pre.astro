@@ -2,89 +2,134 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Ayuda Defensores - Pre">
-  <div class="relative w-full min-h-screen bg-white overflow-hidden">
-    <!-- Header -->
-    <div class="absolute top-0 left-0 w-full h-11 bg-cafeoscuro"></div>
-    <div class="absolute top-3 left-8 flex items-center space-x-2">
-      <span class="text-amarillo font-bold text-sm">#BoletínEscazú:</span>
-      <span class="text-white text-sm">Avances, alertas y desafíos en América Latina y el Caribe | Democracia Ambiental</span>
-    </div>
+<Layout title="Inicio">
 
-    <!-- Navigation Bar -->
-    <div class="absolute top-11 left-0 w-full h-24 bg-white shadow-md rounded-bl-2xl rounded-br-2xl">
-      <div class="flex items-center h-full px-6">
-        <div class="flex items-center space-x-2 mr-8">
-          <div class="w-17 h-13 bg-cafemedio"></div>
-          <div>
-            <div class="text-cafeoscuro font-black text-4xl uppercase">Ayuda</div>
-            <div class="text-cafemedio font-black text-xl uppercase">Defensores</div>
-          </div>
+<!-- Barra inicial -->
+  <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover border-y border-cafeoscuro relative">
+    <div class="text-center">
+      <p class="text-[22px] md:text-[24px] font-normal text-cafeoscuro">Una plataforma de apoyo para</p>
+      <h1 class="text-3xl md:text-9xl font-extrabold text-cafemedio">DEFENSORES</h1>
+      <p class="text-[22px] md:text-[24px] font-semibold text-verde">ambientales en América Latina y el Caribe</p>
+    </div>
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+      <button class="uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition">
+       Busca Ayuda Ahora 
+      </button>
+    </div>
+</section>
+
+<!-- Flecha animada -->
+  <section class="mt-15.5 flex justify-center -z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none" class="animate-slide-down">
+  <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#655846"/>
+</svg>
+  </section>
+
+<!--  -->
+<section class="mt-12.5 flex justify-center">
+<div class="container relative flex flex-col center justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+    <div class="w-full">
+        <div class="flex flex-col w-full mb-10 sm:flex-row">
+          <div class="w-full md:w-1/3 mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg md:text-5xl font-normal text-cafeoscuro">¿Necesitas</h3>                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
+                        <p class="mb-2 ml-3 text-7xl font-extrabold text-cafemedio">AYUDA?</p>
+                    </div>
+                </div>
+            </div>
+          <div class="w-full md:w-2/3 sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
+                        <p class="mb-2 text-gray-600"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex space-x-6 ml-auto">
-          <div class="text-cafemedio font-normal text-sm">Inicio</div>
-          <div class="text-cafeoscuro font-normal text-sm">El proyecto</div>
-          <div class="text-cafeoscuro font-normal text-sm">Herramientas</div>
-          <div class="text-cafeoscuro font-normal text-sm">Boletines</div>
-          <div class="text-cafeoscuro font-normal text-sm">Sobre Escazú</div>
+        <div class="flex flex-col w-full mb-5 sm:flex-row">
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
+                        <p class="mb-2 text-gray-600"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                    <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
+                        <p class="mb-2 text-gray-600"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full sm:w-1/2">
+                <div class="relative h-full ml-0 md:mr-10">
+                    <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
+                        <div class="flex items-center -mt-1">
+                            <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
+                        </div>
+                        <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
+                        <p class="mb-2 text-gray-600"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="ml-8 px-5 py-2 bg-cafemedio rounded-full text-white font-black text-sm uppercase">Protégete</div>
-      </div>
     </div>
-
-    <!-- Main Hero Section -->
-    <div class="absolute top-32 left-0 w-full h-96 bg-cafeoscuro"></div>
-    <div class="absolute top-44 left-1/2 transform -translate-x-1/2 text-center">
-      <div class="text-cafeoscuro font-normal text-xl mb-2">Una plataforma de apoyo para</div>
-       <div class="text-cafemedio font-black text-4xl sm:text-6xl md:text-8xl uppercase">DEFENSORES</div>
-      <div class="text-verde font-semibold text-2xl mt-4">ambientales en América Latina y el Caribe</div>
-       <div class="mt-12 px-6 sm:px-8 py-3 bg-cafeoscuro rounded-full text-white font-black text-lg sm:text-xl uppercase">busca ayuda ahora</div>
     </div>
-
+    </section>
     <!-- Content Sections -->
-    <div class="absolute top-[800px] left-0 w-full">
+<section><div class="top-200 left-0 w-full">
       <div class="text-center mb-8">
          <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">AYUDA?</div>
          <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">¿Necesitas</div>
          <div class="text-cafeoscuro font-bold text-base sm:text-lg max-w-lg mx-auto mt-4">Si enfrentas riesgos o amenazas, aquí puedes acceder rápidamente a herramientas que pueden ayudarte.</div>
          <div class="mt-8 px-6 sm:px-8 py-3 bg-cafeoscuro rounded-full text-white font-black text-lg sm:text-xl uppercase max-w-xs mx-auto">Explorar recursos</div>
-      </div>
+      </div></section>
 
       <!-- Cards Section -->
-       <div class="flex flex-wrap justify-center gap-4 sm:gap-8 mt-16">
+       <section><div class="flex flex-wrap justify-center gap-4 sm:gap-8 mt-16">
          <div class="w-full sm:w-80 h-28 bg-amarillo rounded-2xl flex items-center justify-center">
           <div class="text-cafeoscuro font-semibold text-xl text-center">Protocolos de protección<br/>en tu país</div>
-          <div class="absolute w-13 h-13 bg-verde rounded-full -top-6 right-4"></div>
         </div>
          <div class="w-full sm:w-80 h-28 bg-verde rounded-2xl flex items-center justify-center">
           <div class="text-white font-semibold text-xl text-center">Organizaciones y redes locales que te apoyan</div>
-          <div class="absolute w-13 h-13 bg-white rounded-full -top-6 right-4 border-2 border-white"></div>
         </div>
          <div class="w-full sm:w-80 h-28 bg-cafemedio rounded-2xl flex items-center justify-center">
           <div class="text-white font-semibold text-xl text-center">Herramientas de<br/>autocuidado digital</div>
-          <div class="absolute w-13 h-13 bg-white rounded-full -top-6 right-4 border-2 border-white"></div>
         </div>
-      </div>
-
+      </div></section>
       <!-- Second Section -->
-      <div class="text-center mt-32">
+      <section><div class="text-center mt-32">
          <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">AYUDA</div>
          <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">¿Por qué</div>
          <div class="text-cafeoscuro font-light text-base sm:text-lg max-w-2xl mx-auto mt-4">
           Porque queremos fortalecer la seguridad y protección de quienes defienden derechos humanos ambientales, ofreciendo información clara, rápida y confiable, y conectándoles con redes y herramientas de apoyo en toda la región.
         </div>
          <div class="mt-8 px-6 sm:px-8 py-3 bg-cafeoscuro rounded-full text-white font-black text-lg sm:text-xl uppercase max-w-xs mx-auto">sobre el proyecto</div>
-      </div>
+      </div></section>
 
       <!-- Third Section -->
-      <div class="text-center mt-32">
+      <section><div class="text-center mt-32">
          <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">sobre escazú</div>
          <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">Infórmate</div>
          <div class="text-cafeoscuro font-light text-base sm:text-lg mt-4">Encuentra la última información sobre el Acuerdo Escazú a nivel Regional</div>
-      </div>
+      </div></section>
 
       <!-- Newsletter Section -->
-      <div class="mt-32 bg-cafeoscuro text-white py-16">
+      <section><div class="mt-32 bg-cafeoscuro text-white py-16">
         <div class="text-center">
           <div class="text-white font-black text-xl mb-2">Suscríbete al Newsletter</div>
           <div class="text-white font-light text-lg mb-8">de Democracia Ambiental</div>
@@ -95,20 +140,6 @@ import Layout from '../layouts/Layout.astro';
             <div class="px-8 py-3 bg-cafemedio rounded-full text-white font-black text-xl uppercase">suscribirse</div>
           </div>
         </div>
-      </div>
-    </div>
+      </div></section>
 
-    <!-- Footer -->
-    <div class="absolute bottom-0 left-0 w-full h-40 bg-cafeoscuro"></div>
-    <div class="absolute bottom-8 left-8 text-white">
-      <div class="text-white font-normal text-base mb-2">Contáctanos:</div>
-      <div class="text-white font-medium text-base">ayudadefensores@ciudadaniai.org</div>
-      <div class="text-white font-normal text-base mt-4">Un proyecto de</div>
-    </div>
-    <div class="absolute bottom-8 right-8 flex items-center space-x-2">
-      <div class="text-white font-black text-4xl uppercase">Ayuda</div>
-      <div class="text-white font-black text-2xl uppercase">Defensores</div>
-      <div class="w-18 h-14 bg-cafemedio"></div>
-    </div>
-  </div>
 </Layout>
