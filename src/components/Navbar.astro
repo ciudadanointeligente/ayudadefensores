@@ -1,6 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import Logoayudadefensores from '@/assets/ayuda-defensores.png';
+const { currentPage = '' } = Astro.props;
+
+const getLinkClass = (path: string) => {
+  const isActive = currentPage === path || currentPage.startsWith(path + '/');
+  return `font-normal text-sm transition delay-150 duration-300 ease-in-out ${isActive ? 'text-cafemedio' : 'text-cafeoscuro hover:text-cafemedio'}`;
+};
 ---
 
 <header>
@@ -31,11 +37,11 @@ import Logoayudadefensores from '@/assets/ayuda-defensores.png';
       </div>
       <div class="hidden w-full items-center md:gap-12 font-semibold
         md:flex md:w-3/5 md:justify-center">
-        <a href="/" class="font-normal text-sm text-cafeoscuro hover:text-cafemedio transition delay-150 duration-300 ease-in-out">Inicio</a>
-        <a href="/apoyo" class="font-normal text-sm text-cafeoscuro hover:text-cafemedio transition delay-150 duration-300 ease-in-out">Apoyo por país</a>
-        <a href="/autoproteccion" class="font-normal text-sm text-cafeoscuro hover:text-cafemedio transition delay-150 duration-300 ease-in-out">Autoprotección</a>
-        <a href="/acompanamiento" class="font-normal text-sm text-cafeoscuro hover:text-cafemedio transition delay-150 duration-300 ease-in-out">Acompañamiento</a>
-        <a href="/escazu" class="font-normal text-sm text-cafeoscuro hover:text-cafemedio transition delay-150 duration-300 ease-in-out">Escazú</a>
+        <a href="/" class={getLinkClass('/')}>Inicio</a>
+        <a href="/apoyo" class={getLinkClass('/apoyo')}>Apoyo por país</a>
+        <a href="/autoproteccion" class={getLinkClass('/autoproteccion')}>Autoprotección</a>
+        <a href="/acompanamiento" class={getLinkClass('/acompanamiento')}>Acompañamiento</a>
+        <a href="/escazu" class={getLinkClass('/escazu')}>Escazú</a>
       </div>
       <div class="hidden w-1/5 items-center justify-evenly font-semibold
         md:flex">
