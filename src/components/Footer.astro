@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import Logoayudadefensoresfooter from '@/assets/ayudadefensores-footer.webp';
+import LogoFCI from '@/assets/fci-footer.webp';
+---
+
+<!-- Newsletter Section -->
+<section class="mt-22 flex justify-center px-4 sm:px-6">
+  <div class="w-full max-w-[1337px] bg-cafeoscuro rounded-xl flex flex-col md:flex-row items-center justify-between px-6 py-6 md:px-12 md:h-32 gap-6">
+    <div class="text-white text-center md:text-left">
+      <div class="font-semibold text-lg md:text-xl mb-1">Suscríbete al Newsletter</div>
+      <div class="font-light text-base md:text-lg">de Democracia Ambiental</div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+      <div class="w-full sm:w-64 h-10 bg-white rounded-lg flex items-center px-4">
+        <span class="text-cafeoscuro font-light text-sm md:text-base">Escribe tu correo aquí</span>
+      </div>
+      <div class="px-6 py-2 bg-cafemedio rounded-full text-white font-semibold text-sm md:text-lg uppercase cursor-pointer whitespace-nowrap">suscribirse</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="-mt-8">
+  <footer class="py-8 bg-cafeoscuro text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div class="text-center md:text-left">
+          <p class="text-sm font-light">contacto@ayudadefensores.org</p>
+        </div>
+        <div class="text-center">
+          <Image src={Logoayudadefensoresfooter} alt="Logo Ayuda Defensores Footer" class="h-auto mx-auto">
+        </div>
+        <div class="text-center md:text-right flex flex-row items-center justify-center md:justify-end gap-2">
+          <span class="text-sm font-light">Un proyecto de</span>
+          <Image src={LogoFCI} alt="Logo Fundación Ciudadanía Inteligente" class="h-auto" />
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- Disclaimer Bar -->
+<div class="h-10 bg-verde flex items-center justify-center">
+  <span class="text-white text-xs font-light px-4 text-center">Ayuda Defensores de Ciudadanía Inteligente | 2026 Todos los derechos reservados</span>
+</div>
