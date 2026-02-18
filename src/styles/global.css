@@ -11,6 +11,15 @@
   --color-cafemedio: #D06B28;
   --color-verde: #818B3E;
   --color-amarillo: #F7CB67;
+  --spacing-50: 200px;
+  --spacing-90: 360px;
+  --spacing-12\.5: 50px;
+  --spacing-15\.5: 62px;
+  --spacing-200: 800px;
+  --spacing-30: 120px;
+  --spacing-60: 240px;
+  --spacing-22: 88px;
+  --color-cafeclaro: #8B7355;
 }
 
 @keyframes slide-down {
