@@ -1,16 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/forms";
+
 @plugin "daisyui" {
   themes: light --default, light --preferslight;
-};
-
+}
 
 @theme {
   --color-cafeoscuro: #655846;
   --color-cafemedio: #D06B28;
   --color-verde: #818B3E;
   --color-amarillo: #F7CB67;
+  --color-azul: #3F3E8B;
+  --color-cafeclaro: #8B7355;
   --spacing-50: 200px;
   --spacing-90: 360px;
   --spacing-12\.5: 50px;
@@ -19,7 +21,6 @@
   --spacing-30: 120px;
   --spacing-60: 240px;
   --spacing-22: 88px;
-  --color-cafeclaro: #8B7355;
 }
 
 @keyframes slide-down {
@@ -27,6 +28,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -41,6 +43,7 @@
   from {
     fill: white;
   }
+
   to {
     fill: #818B3E;
   }
@@ -49,4 +52,3 @@
 .animate-fade-color {
   animation: fade-white-to-verde 0.8s ease-out forwards;
 }
-

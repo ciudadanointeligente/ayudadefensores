@@ -43,22 +43,42 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Shields -->
+  <section class="mt-12 md:mt-12 flex justify-center">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="flex flex-col flex-wrap md:flex-row place-content-center gap-8">
+      <div class="w-80 h-28 bg-amarillo rounded-xl relative mt-12">
+        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-amarillo rounded-full"></div>
+      </div>
+      <div class="w-80 h-28 bg-verde rounded-xl relative mt-12">
+        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-verde rounded-full"></div>
+      </div>
+      <div class="w-80 h-28 bg-cafemedio rounded-xl relative mt-12">
+        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-cafemedio rounded-full"></div>
+      </div>
+      <div class="w-80 h-28 bg-azul rounded-xl relative mt-12">
+        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-azul rounded-full"></div>
+      </div>
+      </div>
+      </div>
+  </section>
+
 </Layout>
 
 <style>
 @keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
 @keyframes animate-once {
-  0%, 100% { transform: translateY(0); }
-  5% { transform: translateY(5px); }
+0%, 100% { transform: translateY(0); }
+5% { transform: translateY(5px); }
 }
 .animate-slide-in {
   animation: slide-in 0.8s ease-out forwards;
