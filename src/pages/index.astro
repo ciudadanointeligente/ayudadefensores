@@ -6,12 +6,12 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Barra inicial -->
   <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover relative">
-    <div class="text-center">
+    <div class="text-center opacity-0 animate-slide-in">
       <p class="text-[22px] md:text-[24px] font-normal text-cafeoscuro">Una plataforma de apoyo para</p>
       <h1 class="text-3xl md:text-9xl font-extrabold text-cafemedio">DEFENSORES</h1>
       <p class="text-[22px] md:text-[24px] font-semibold text-verde">ambientales en América Latina y el Caribe</p>
     </div>
-    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 animate-slide-in-delay">
       <button class="uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition">
         Busca Ayuda Ahora 
       </button>
@@ -25,171 +25,46 @@ import Layout from '../layouts/Layout.astro';
     </svg>
   </section>
 
-  <!-- Cajas -->
-  <section class="mt-12.5 flex justify-center">
-    <div class="container relative flex flex-col center justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-      <div class="w-full">
-        <div class="flex flex-col w-full mb-10 sm:flex-row">
-          <div class="w-full md:w-1/3 mb-10 md:mb-0">
-            <div class="h-full p-5 bg-white border-2 border-gray-400 rounded-lg md:text-left text-center">
-              <div>
-                <div class="my-2 text-lg md:text-5xl font-normal text-cafeoscuro">¿Necesitas</div>
-              </div>
-              <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-              <p class="md:ml-3 text-4xl md:text-7xl font-extrabold text-cafemedio">AYUDA?</p>
-            </div>
-          </div>
-          <div class="w-full md:w-2/3">
-            <div class="h-full p-5 bg-white border-2 border-gray-400 rounded-lg md:text-left text-center">
-              <div class="flex items-center -mt-1">
-                <h3 class="my-2 md:ml-3 text-lg font-bold text-gray-800"></h3>
-              </div>
-              <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-              <p class="mb-2 text-gray-600"></p>
-            </div>
-          </div>
+
+  <!-- Sección ayuda -->
+  <section class="mt-12 flex justify-center">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/3 text-center">
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">¿Necesitas</div>
+          <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">AYUDA?</p>
         </div>
-        <div class="flex flex-col w-full mb-5 sm:flex-row">
-          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2">
-            <div class="relative h-full ml-0 md:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
+        <div class="w-full md:w-2/3 mt-4 md:mt-0">
+          <div class="bg-lime-200/40 rounded-lg p-6">
+            <p class="text-cafeoscuro text-xl">Si enfrentas riesgos, amenazas o hostigamiento por defender el ambiente, aquí puedes encontrar apoyo, información confiable y redes que pueden ayudarte.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="mt-12.5 flex justify-center">
-    <div class="container relative flex flex-col center justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-      <div class="w-full">
-        <div class="flex flex-col w-full mb-10 sm:flex-row">
-          <div class="w-full md:w-1/3 mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg md:text-5xl font-normal text-cafeoscuro">¿Necesitas</h3>                        </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 ml-3 text-7xl font-extrabold text-cafemedio">AYUDA?</p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-2/3 sm:w-1/2">
-            <div class="relative h-full ml-0 md:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-col w-full mb-5 sm:flex-row">
-          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
-            <div class="relative h-full ml-0 mr-0 sm:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2">
-            <div class="relative h-full ml-0 md:mr-10">
-              <div class="relative h-full p-5 bg-white border-2 border-gray-400 rounded-lg">
-                <div class="flex items-center -mt-1">
-                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"></h3>
-                </div>
-                <p class="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase"></p>
-                <p class="mb-2 text-gray-600"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Content Sections -->
-  <section><div class="top-200 left-0 w-full">
-    <div class="text-center mb-8">
-      <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">AYUDA?</div>
-      <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">¿Necesitas</div>
-      <div class="text-cafeoscuro font-bold text-base sm:text-lg max-w-lg mx-auto mt-4">Si enfrentas riesgos o amenazas, aquí puedes acceder rápidamente a herramientas que pueden ayudarte.</div>
-      <div class="mt-8 px-6 sm:px-8 py-3 bg-cafeoscuro rounded-full text-white font-black text-lg sm:text-xl uppercase max-w-xs mx-auto">Explorar recursos</div>
-    </div></section>
-
-  <!-- Cards Section -->
-  <section><div class="flex flex-wrap justify-center gap-4 sm:gap-8 mt-16">
-    <div class="w-full sm:w-80 h-28 bg-amarillo rounded-2xl flex items-center justify-center">
-      <div class="text-cafeoscuro font-semibold text-xl text-center">Protocolos de protección<br/>en tu país</div>
-    </div>
-    <div class="w-full sm:w-80 h-28 bg-verde rounded-2xl flex items-center justify-center">
-      <div class="text-white font-semibold text-xl text-center">Organizaciones y redes locales que te apoyan</div>
-    </div>
-    <div class="w-full sm:w-80 h-28 bg-cafemedio rounded-2xl flex items-center justify-center">
-      <div class="text-white font-semibold text-xl text-center">Herramientas de<br/>autocuidado digital</div>
-    </div>
-  </div></section>
-
-  <!-- Second Section -->
-  <section><div class="text-center mt-32">
-    <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">AYUDA</div>
-    <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">¿Por qué</div>
-    <div class="text-cafeoscuro font-light text-base sm:text-lg max-w-2xl mx-auto mt-4">
-      Porque queremos fortalecer la seguridad y protección de quienes defienden derechos humanos ambientales, ofreciendo información clara, rápida y confiable, y conectándoles con redes y herramientas de apoyo en toda la región.
-    </div>
-    <div class="mt-8 px-6 sm:px-8 py-3 bg-cafeoscuro rounded-full text-white font-black text-lg sm:text-xl uppercase max-w-xs mx-auto">sobre el proyecto</div>
-  </div></section>
-
-  <!-- Third Section -->
-  <section><div class="text-center mt-32">
-    <div class="text-cafemedio font-black text-4xl sm:text-6xl uppercase">sobre escazú</div>
-    <div class="text-cafeoscuro font-normal text-2xl sm:text-4xl mt-4">Infórmate</div>
-    <div class="text-cafeoscuro font-light text-base sm:text-lg mt-4">Encuentra la última información sobre el Acuerdo Escazú a nivel Regional</div>
-  </div></section>
-
 
 </Layout>
+
+<style>
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes animate-once {
+  0%, 100% { transform: translateY(0); }
+  5% { transform: translateY(5px); }
+}
+.animate-slide-in {
+  animation: slide-in 0.8s ease-out forwards;
+}
+.animate-slide-in-delay {
+  animation: slide-in 0.8s ease-out 0.4s forwards;
+}
+</style>
+
