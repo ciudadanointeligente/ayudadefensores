@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import shieldIcon from '../assets/shield.webp';
+import heartIcon from '../assets/heart.webp';
 ---
 
 <Layout title="Inicio">
@@ -48,30 +49,60 @@ import shieldIcon from '../assets/shield.webp';
   <section class="mt-12 md:mt-12 flex justify-center">
     <div class="container max-w-6xl mx-auto px-4">
       <div class="flex flex-col flex-wrap md:flex-row place-content-center gap-8">
-      <div class="w-80 h-48 bg-amarillo rounded-xl relative mt-12">
+        <div class="w-80 h-48 bg-amarillo rounded-xl relative mt-12">
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-amarillo rounded-full flex items-center justify-center">
             <img src={shieldIcon.src} alt="Shield" class="w-16 h-16" />
           </div>
-      </div>
-      <div class="w-80 h-48 bg-verde rounded-xl relative mt-12">
+        </div>
+        <div class="w-80 h-48 bg-verde rounded-xl relative mt-12">
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-verde rounded-full flex items-center justify-center">
             <img src={shieldIcon.src} alt="Shield" class="w-16 h-16 invert brightness-20" />
           </div>
-      </div>
-      <div class="w-80 h-48 bg-cafemedio rounded-xl relative mt-12">
+        </div>
+        <div class="w-80 h-48 bg-cafemedio rounded-xl relative mt-12">
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-cafemedio rounded-full flex items-center justify-center">
             <img src={shieldIcon.src} alt="Shield" class="w-16 h-16 invert brightness-20" />
           </div>
-      </div>
-      <div class="w-80 h-48 bg-azul rounded-xl relative mt-12">
+        </div>
+        <div class="w-80 h-48 bg-azul rounded-xl relative mt-12">
           <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-azul rounded-full flex items-center justify-center">
             <img src={shieldIcon.src} alt="Shield" class="w-16 h-16 invert brightness-20" />
           </div>
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
   </section>
 
+  <!-- Flecha -->
+  <section class="mt-15.5 flex justify-center -z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
+      <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
+    </svg>
+  </section>
+
+
+  <!-- Que es -->
+  <section class="mt-12 flex justify-center">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 md:text-left text-center">
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">¿Qué es</div>
+          <p class="text-3xl md:text-7xl font-extrabold text-cafemedio">AYUDA</p>
+          <p class="text-3xl md:text-5xl font-extrabold text-cafemedio">DEFENSORES?</p>
+        </div>
+        <div class="w-full md:w-1/2 mt-4 md:mt-0">
+          <div class="p-6 ml-20">
+            <div class="text-verde text-5xl font-extrabold">PROPÓSITO</div>
+            <p class="mt-4 text-cafeoscuro text-[20px] mr-10">Proteger y empoderar a personas defensoras del ambiente en América Latina y el Caribe.</p>
+            <p class="mt-2 text-cafeoscuro text-[20px] font-bold">Queremos que la defensa ambiental sea:</p>
+            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />SEGURA</div>
+            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />CONECTADA</div>
+            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />RESPALDADA EN CADA PAÍS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
