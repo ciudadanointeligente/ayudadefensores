@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout-paises.astro';
-import { getLocaleFromUrl, t } from '../i18n/utils.ts';
+import Layout from '../../layouts/Layout-paises.astro';
+import { getLocaleFromUrl, t } from '../../i18n/utils.ts';
 
 const locale = getLocaleFromUrl(Astro.url);
 
@@ -16,7 +16,7 @@ const paises = [
 <Layout title={t('nav.apoyoPorPais', locale)}>
 
   <!-- Barra inicial -->
-  <section class="flex w-full h-auto md:h-60 bg-[url(../assets/bg-ayudadefensores.png)] bg-cover relative py-2 md:py-0">
+  <section class="flex w-full h-auto md:h-60 bg-[url(../../assets/bg-ayudadefensores.png)] bg-cover relative py-2 md:py-0">
     <div class="absolute inset-0 bg-cover -z-10"></div>
     <div class="w-full px-4 flex flex-col items-center gap-4 pt-16 pb-6 md:hidden">
       <span class="w-fit inline-block rounded-2xl px-4 py-1 bg-white text-verde text-[12px] font-medium uppercase"><a href="/" class="hover:text-cafemedio">{t('nav.inicio', locale)}</a> / {t('nav.apoyoPorPais', locale)}</span>

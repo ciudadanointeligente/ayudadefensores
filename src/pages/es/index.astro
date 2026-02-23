@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import shieldIcon from '../assets/shield.webp';
-import heartIcon from '../assets/heart.webp';
-import { getLocaleFromUrl, t } from '../i18n/utils.ts';
+import Layout from '../../layouts/Layout.astro';
+import shieldIcon from '../../assets/shield.webp';
+import heartIcon from '../../assets/heart.webp';
+import { getLocaleFromUrl, t } from '../../i18n/utils.ts';
 
 const locale = getLocaleFromUrl(Astro.url);
 ---
@@ -10,7 +10,7 @@ const locale = getLocaleFromUrl(Astro.url);
 <Layout title={t('nav.inicio', locale)}>
 
   <!-- Barra inicial -->
-  <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(../assets/bg-ayudadefensores.png)] bg-cover relative">
+  <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(../../assets/bg-ayudadefensores.png)] bg-cover relative">
     <div class="text-center opacity-0 animate-slide-in">
       <p class="text-[22px] md:text-[24px] font-normal text-cafeoscuro">{t('index.banner.subtitulo', locale)}</p>
       <h1 class="text-3xl md:text-9xl font-extrabold text-cafemedio">{t('index.banner.titulo', locale)}</h1>

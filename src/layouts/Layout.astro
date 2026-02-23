@@ -5,11 +5,15 @@ import Banner from "@/components/Banner.astro";
 import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
 import { ClientRouter } from 'astro:transitions';
+import { getLocaleFromUrl } from "@/i18n/utils";
+
 const { title } = Astro.props;
+const locale = getLocaleFromUrl(Astro.url);
+const lang = locale === 'pt' ? 'pt-BR' : 'es';
 ---
 
 <!doctype html>
-<html lang="es" class="overflow-x-hidden">
+<html lang={lang} class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
