@@ -21,4 +21,7 @@ export default defineConfig({
 
   integrations: [alpinejs()],
   adapter: cloudflare(),
+  redirects: {
+    "/": "/es/",
+  },
 });

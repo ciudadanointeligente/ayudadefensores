@@ -7,14 +7,15 @@ const { currentPage = '' } = Astro.props;
 const locale = getLocaleFromUrl(Astro.url);
 
 const getLinkClass = (path: string) => {
-  const isActive = currentPage === path || currentPage.startsWith(path + '/');
+  const cleanPath = currentPage.replace(/^\/(es|pt)\//, '/');
+  const isActive = cleanPath === path || cleanPath.startsWith(path + '/');
   return `font-normal text-sm transition delay-150 duration-300 ease-in-out ${isActive ? 'text-cafemedio' : 'text-cafeoscuro hover:text-cafemedio'}`;
 };
 
-const currentPath = currentPage.replace(/^\/(es|pt)/, '').replace(/^\/+/, '/') || '/';
+const currentPath = currentPage.replace(/^\/(es|pt)\//, '/').replace(/^\/+/, '/') || '/';
 const esUrl = getLocaleUrl(currentPath, 'es');
 const ptUrl = getLocaleUrl(currentPath, 'pt');
-const homeUrl = locale === 'pt' ? '/pt/' : '/';
+const homeUrl = locale === 'pt' ? '/pt/' : '/es/';
 ---
 
 <header>

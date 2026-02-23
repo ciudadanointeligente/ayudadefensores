@@ -38,7 +38,7 @@ export function t(key: string, locale: Locale = 'es'): string {
 export function getLocaleUrl(path: string, locale: Locale): string {
   const cleanPath = path.replace(/^\/+/, '/');
   if (locale === 'es') {
-    return cleanPath === '/' ? '/' : cleanPath;
+    return cleanPath === '/' ? '/es/' : `/es${cleanPath}`;
   }
   return `/${locale}${cleanPath === '/' ? '' : cleanPath}`;
 }

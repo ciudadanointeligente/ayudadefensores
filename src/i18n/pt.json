@@ -28,14 +28,14 @@
     "ayuda": {
       "titulo": "Você precisa",
       "titulo2": "AJUDA?",
-      "descricao": "Se você enfrenta riscos, ameaças ou assédio por defender o meio ambiente, aqui você pode encontrar apoio, informações confiáveis e redes que podem ajudá-lo."
+      "descripcion": "Se você enfrenta riscos, ameaças ou assédio por defender o meio ambiente, aqui você pode encontrar apoio, informações confiáveis e redes que podem ajudá-lo."
     },
     "queEs": {
       "titulo": "O que é",
       "titulo2": "AJUDA",
       "titulo3": "DEFENSORES?",
       "proposito": "PROPÓSITO",
-      "descricao": "Proteger e empoderar pessoas defensoras do meio ambiente na América Latina e no Caribe.",
+      "descripcion": "Proteger e empoderar pessoas defensoras do meio ambiente na América Latina e no Caribe.",
       "queremos": "Queremos que a defesa ambiental seja:",
       "segura": "SEGURA",
       "conectada": "CONECTADA",
@@ -44,19 +44,19 @@
   },
   "apoyo": {
     "titulo": "APOIO ESTATAL",
-    "descricao": "Aqui você encontrará programas, mecanismos e entidades públicas que podem oferecer apoio ou proteção a pessoas defensoras do meio ambiente em cada país.",
+    "descripcion": "Aqui você encontrará programas, mecanismos e entidades públicas que podem oferecer apoio ou proteção a pessoas defensoras do meio ambiente em cada país.",
     "seleccionarPais": "SELECIONAR PAÍS:"
   },
   "autoproteccion": {
     "titulo": "AUTOPROTEÇÃO",
-    "descricao": "Você encontrará várias ferramentas de autoproteção para defensores ambientais em segurança digital, bem-estar psicossocial, proteção física e comunitária."
+    "descripcion": "Você encontrará várias ferramentas de autoproteção para defensores ambientais em segurança digital, bem-estar psicossocial, proteção física e comunitária."
   },
   "acompanamiento": {
     "titulo": "ACOMPANHAMENTO",
-    "descricao": "Conheça as organizações nacionais, regionais e globais que acompanham e apoiam pessoas defensoras ambientais na América Latina e no Caribe."
+    "descripcion": "Conheça as organizações nacionais, regionais e globais que acompanham e apoiam pessoas defensoras ambientais na América Latina e no Caribe."
   },
   "escazu": {
     "titulo": "ACORDO DE ESCAZÚ",
-    "descricao": "O Acordo de Escazú é o primeiro tratado vinculante sobre democracia ambiental na América Latina e no Caribe."
+    "descripcion": "O Acordo de Escazú é o primeiro tratado vinculante sobre democracia ambiental na América Latina e no Caribe."
   }
 }
