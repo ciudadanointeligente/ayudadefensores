@@ -40,5 +40,5 @@ export function getLocaleUrl(path: string, locale: Locale): string {
   if (locale === 'es') {
     return cleanPath === '/' ? '/es/' : `/es${cleanPath}`;
   }
-  return `/${locale}${cleanPath === '/' ? '' : cleanPath}`;
+  return cleanPath === '/' ? `/${locale}/` : `/${locale}${cleanPath}`;
 }
