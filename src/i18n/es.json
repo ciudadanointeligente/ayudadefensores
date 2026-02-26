@@ -40,6 +40,12 @@
       "segura": "SEGURA",
       "conectada": "CONECTADA",
       "respaldada": "RESPALDADA EN CADA PAÍS"
+    },
+    "quien": {
+      "titulo": "¿Quién lo",
+      "titulo2": "IMPULSA?",
+      "proyectode": "Un proyecto de:",
+      "boton": "Ir a Ciudadanía Inteligente"
     }
   },
   "apoyo": {
@@ -58,5 +64,47 @@
   "escazu": {
     "titulo": "ACUERDO DE ESCAZÚ",
     "descripcion": "El Acuerdo de Escazú es el primer tratado vinculante sobre democracia ambiental en América Latina y el Caribe."
+  },
+  "pais": {
+    "mexico": {
+      "titulo": "MÉXICO",
+      "descripcion": "Cuenta con un mecanismo de protección para personas defensoras de derechos humanos y periodistas.",
+      "direccion": "Dirección: Calle Dinamarca número 84, piso 7, colonia Juárez, Delegación Cuauhtémoc, Ciudad de México. C. P. 06600.",
+      "telefono": "Teléfono: 01 800 800 40 50 llamada sin costo - 01 55 5209 88 00 ext. 30863",
+      "correo": "Correo: <a href=\"mailto:mecanismo@segob.gob.mx\">mecanismo@segob.gob.mx</a>",
+      "accionEstatal": "Acción estatal y entidades de apoyo en México:"
+    },
+    "chile": {
+      "titulo": "Chile",
+      "descripcion": "Información de recursos y apoyo para defensores ambientales en Chile.",
+      "item1": "Organizaciones locales de apoyo",
+      "item2": "Protocolos de protección",
+      "item3": "Herramientas de autoprotección",
+      "item4": "Redes de acompañamiento"
+    },
+    "argentina": {
+      "titulo": "Argentina",
+      "descripcion": "Información de recursos y apoyo para defensores ambientales en Argentina.",
+      "item1": "Organizaciones locales de apoyo",
+      "item2": "Protocolos de protección",
+      "item3": "Herramientas de autoprotección",
+      "item4": "Redes de acompañamiento"
+    },
+    "bolivia": {
+      "titulo": "Bolivia",
+      "descripcion": "Información de recursos y apoyo para defensores ambientales en Bolivia.",
+      "item1": "Organizaciones locales de apoyo",
+      "item2": "Protocolos de protección",
+      "item3": "Herramientas de autoprotección",
+      "item4": "Redes de acompañamiento"
+    },
+    "peru": {
+      "titulo": "Perú",
+      "descripcion": "Información de recursos y apoyo para defensores ambientales en Perú.",
+      "item1": "Organizaciones locales de apoyo",
+      "item2": "Protocolos de protección",
+      "item3": "Herramientas de autoprotección",
+      "item4": "Redes de acompañamiento"
+    }
   }
 }

@@ -1,0 +1,24 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es', pais: 'argentina' } },
+    { params: { lang: 'pt', pais: 'argentina' } },
+  ];
+}
+
+import { t } from '../../../i18n/utils.ts';
+
+const { lang } = Astro.params;
+const locale = lang === 'pt' ? 'pt' : 'es';
+---
+
+<div class="p-6 bg-white border-2 border-gray-200 rounded-lg">
+  <h2 class="text-2xl font-bold text-cafeoscuro mb-4">{t('pais.argentina.titulo', locale)}</h2>
+  <p class="text-gray-600">{t('pais.argentina.descripcion', locale)}</p>
+  <ul class="mt-4 space-y-2">
+    <li>• {t('pais.argentina.item1', locale)}</li>
+    <li>• {t('pais.argentina.item2', locale)}</li>
+    <li>• {t('pais.argentina.item3', locale)}</li>
+    <li>• {t('pais.argentina.item4', locale)}</li>
+  </ul>
+</div>

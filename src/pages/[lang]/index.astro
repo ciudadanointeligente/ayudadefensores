@@ -9,6 +9,7 @@ export function getStaticPaths() {
 import Layout from '../../layouts/Layout.astro';
 import shieldIcon from '../../assets/shield.webp';
 import heartIcon from '../../assets/heart.webp';
+import logoFCIVerde from '../../assets/fci-logo-verde.webp';
 import { t } from '../../i18n/utils.ts';
 
 const { lang } = Astro.params;
@@ -121,6 +122,59 @@ const locale = lang === 'pt' ? 'pt' : 'es';
       <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
     </svg>
   </section>
+
+  <!-- Quienes somos -->
+  <section class="mt-10">
+    <div class="text-center">
+      <div class="flex justify-center">
+        <div class="text-left">
+          <div class="text-2xl md:text-5xl font-normal text-cafeoscuro">{t('index.quien.titulo', locale)}</div>
+          <p class="text-3xl md:text-7xl font-extrabold text-cafemedio">{t('index.quien.titulo2', locale)}</p>
+        </div>
+      </div>
+    </div>
+        <div class="container max-w-6xl mx-auto px-4 mt-10">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/3 text-left">
+          <div class="text-md font-semibold text-cafeoscuro">{t('index.quien.proyectode', locale)}</div>
+          <div class="mt-2">
+            <img src={logoFCIVerde.src} alt="Logo FCI" class="w-70 h-auto" />
+          </div>
+      <button class="mt-4 uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition">
+        {t('index.quien.boton', locale)} 
+      </button>
+        </div>
+        <div class="w-full md:w-2/3 mt-4 md:mt-0">
+          <div class="md:ml-4 bg-amber-300/10 rounded-lg p-6" id="quienes-somos-content">
+            <span class="text-cafeoscuro">Cargando...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    async function loadContent() {
+      const container = document.getElementById('quienes-somos-content');
+      if (!container) return;
+      
+      const lang = document.documentElement.lang === 'pt-BR' ? 'pt' : 'es';
+      
+      try {
+        const response = await fetch(`/api/quienes-somos/${lang}`);
+        if (response.ok) {
+          const html = await response.text();
+          container.innerHTML = html;
+        }
+      } catch (e) {
+        console.error('Error cargando contenido:', e);
+      }
+    }
+    
+    loadContent();
+    
+    document.addEventListener('astro:page-load', loadContent);
+  </script>
 
 </Layout>
 
