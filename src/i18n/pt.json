@@ -70,9 +70,9 @@
       "titulo": "MÉXICO",
       "descripcion": "Conta com um mecanismo de proteção para pessoas defensoras de direitos humanos e jornalistas.",
       "direccion": "Endereço: Calle Dinamarca número 84, andar 7, colônia Juárez, Delegación Cuauhtémoc, Cidade do México. C. P. 06600.",
-      "telefone": "Telefone: 01 800 800 40 50 chamada sem custo - 01 55 5209 88 00 ramal 30863",
-      "correo": "E-mail: <a href=\"mailto:mecanismo@segob.gob.mx\">mecanismo@segob.gob.mx</a>",
-      "acaoEstatal": "Ação estatal e entidades de apoio no México:"
+      "telefono": "Telefone: 01 800 800 40 50 chamada sem custo - 01 55 5209 88 00 ramal 30863",
+      "correo": "E-mail: mecanismo@segob.gob.mx",
+      "accionEstatal": "Ação estatal e entidades de apoio no México:"
     },
     "chile": {
       "titulo": "Chile",
