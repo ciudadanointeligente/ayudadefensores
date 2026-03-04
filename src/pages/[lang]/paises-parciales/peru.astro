@@ -17,12 +17,12 @@ const ubicaciones = [
     id: 'lima',
     titulo: 'Lima',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Jr. Ucayali #388, Lima Centro.<br/>
         Teléfono:<br/>
         +51 1 311-0300<br/>
-        Correo: <a href="mailto:informes@defensoria.gob.pe" class="text-stone-600 underline">informes@defensoria.gob.pe</a>
+        Correo: <a href="mailto:informes@defensoria.gob.pe" class="text-white underline">informes@defensoria.gob.pe</a>
       </p>
     `
   },
@@ -30,12 +30,12 @@ const ubicaciones = [
     id: 'arequipa',
     titulo: 'Arequipa',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Arequipa:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Arequipa:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Calle La Merced #108, Cercado de Arequipa.<br/>
         Teléfono:<br/>
         +51 54 215-300<br/>
-        Correo: <a href="mailto:arequipa@defensoria.gob.pe" class="text-stone-600 underline">arequipa@defensoria.gob.pe</a>
+        Correo: <a href="mailto:arequipa@defensoria.gob.pe" class="text-white underline">arequipa@defensoria.gob.pe</a>
       </p>
     `
   },
@@ -43,12 +43,12 @@ const ubicaciones = [
     id: 'cusco',
     titulo: 'Cusco',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Cusco:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Cusco:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Av. Tullumayo #463, Cusco.<br/>
         Teléfono:<br/>
         +51 84 240-300<br/>
-        Correo: <a href="mailto:cusco@defensoria.gob.pe" class="text-stone-600 underline">cusco@defensoria.gob.pe</a>
+        Correo: <a href="mailto:cusco@defensoria.gob.pe" class="text-white underline">cusco@defensoria.gob.pe</a>
       </p>
     `
   }
@@ -65,7 +65,7 @@ const ubicaciones = [
   <p class="text-center mt-10 uppercase text-cafeoscuro font-bold">Acción estatal y entidades de apoyo en Perú:</p>
   
   <div class="container max-w-4xl mx-auto px-4 mt-8">
-    <div class="flex flex-col">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
       {ubicaciones.map((ubicacion) => (
         <Accordion 
           id={ubicacion.id}

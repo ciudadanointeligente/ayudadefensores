@@ -17,12 +17,12 @@ const ubicaciones = [
     id: 'lapaz',
     titulo: 'La Paz',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo de Bolivia:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo de Bolivia:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Calle排水系统 #0908, Edif. Havanna, Piso 3, La Paz.<br/>
         Teléfono:<br/>
         +591 2 211 4000<br/>
-        Correo: <a href="mailto:defensoria@defensoria.gob.bo" class="text-stone-600 underline">defensoria@defensoria.gob.bo</a>
+        Correo: <a href="mailto:defensoria@defensoria.gob.bo" class="text-white underline">defensoria@defensoria.gob.bo</a>
       </p>
     `
   },
@@ -30,12 +30,12 @@ const ubicaciones = [
     id: 'santacruz',
     titulo: 'Santa Cruz de la Sierra',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Santa Cruz:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Santa Cruz:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Calle Beni #415, entre Monseñor Rivero y Germán Busch, Santa Cruz.<br/>
         Teléfono:<br/>
         +591 3 336 0000<br/>
-        Correo: <a href="mailto:defensoria.scz@defensoria.gob.bo" class="text-stone-600 underline">defensoria.scz@defensoria.gob.bo</a>
+        Correo: <a href="mailto:defensoria.scz@defensoria.gob.bo" class="text-white underline">defensoria.scz@defensoria.gob.bo</a>
       </p>
     `
   },
@@ -43,12 +43,12 @@ const ubicaciones = [
     id: 'cochabamba',
     titulo: 'Cochabamba',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Cochabamba:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría del Pueblo - Oficina Regional Cochabamba:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Av. Libertador #100, Edif. Centro Comercial, Piso 4, Cochabamba.<br/>
         Teléfono:<br/>
         +591 4 458 0000<br/>
-        Correo: <a href="mailto:defensoria.cba@defensoria.gob.bo" class="text-stone-600 underline">defensoria.cba@defensoria.gob.bo</a>
+        Correo: <a href="mailto:defensoria.cba@defensoria.gob.bo" class="text-white underline">defensoria.cba@defensoria.gob.bo</a>
       </p>
     `
   }
@@ -65,7 +65,7 @@ const ubicaciones = [
   <p class="text-center mt-10 uppercase text-cafeoscuro font-bold">Acción estatal y entidades de apoyo en Bolivia:</p>
   
   <div class="container max-w-4xl mx-auto px-4 mt-8">
-    <div class="flex flex-col">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
       {ubicaciones.map((ubicacion) => (
         <Accordion 
           id={ubicacion.id}

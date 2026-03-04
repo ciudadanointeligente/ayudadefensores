@@ -19,7 +19,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [alpinejs()],
+  integrations: [alpinejs({ entrypoint: '/src/entrypoint' })],
   adapter: cloudflare(),
   redirects: {
     "/": "/es/",

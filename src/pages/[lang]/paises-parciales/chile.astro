@@ -17,12 +17,12 @@ const ubicaciones = [
     id: 'santiago',
     titulo: 'Región Metropolitana (Santiago)',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría de los Derechos de la Niñez:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Defensoría de los Derechos de la Niñez:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Morandé #360, Santiago Centro.<br/>
         Teléfono:<br/>
         +56 2 2617 4000<br/>
-        Correo: <a href="mailto:contacto@defensorianinez.cl" class="text-stone-600 underline">contacto@defensorianinez.cl</a>
+        Correo: <a href="mailto:contacto@defensorianinez.cl" class="text-white underline">contacto@defensorianinez.cl</a>
       </p>
     `
   },
@@ -30,12 +30,12 @@ const ubicaciones = [
     id: 'valparaiso',
     titulo: 'Región de Valparaíso',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Instituto Nacional de Derechos Humanos:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Instituto Nacional de Derechos Humanos:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Manuel Montt #750, Valparaíso.<br/>
         Teléfono:<br/>
         +56 32 250 3700<br/>
-        Correo: <a href="mailto:indh@indh.cl" class="text-stone-600 underline">indh@indh.cl</a>
+        Correo: <a href="mailto:indh@indh.cl" class="text-white underline">indh@indh.cl</a>
       </p>
     `
   },
@@ -43,12 +43,12 @@ const ubicaciones = [
     id: 'biobio',
     titulo: 'Región del Biobío (Concepción)',
     contenido: `
-      <p class="text-stone-600 text-lg font-bold font-['Geologica'] leading-6 mb-2">Seremi de Derechos Humanos - Biobío:</p>
-      <p class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6">
+      <p class="text-white text-lg font-bold font-['Geologica'] leading-6 mb-2">Seremi de Derechos Humanos - Biobío:</p>
+      <p class="text-white text-lg font-normal font-['Geologica'] leading-6">
         Dirección: Colo-Colo #280, Concepción.<br/>
         Teléfono:<br/>
         +56 41 224 5500<br/>
-        Correo: <a href="mailto:seremi.biobio@minsegpres.gob.cl" class="text-stone-600 underline">seremi.biobio@minsegpres.gob.cl</a>
+        Correo: <a href="mailto:seremi.biobio@minsegpres.gob.cl" class="text-white underline">seremi.biobio@minsegpres.gob.cl</a>
       </p>
     `
   }
@@ -65,7 +65,7 @@ const ubicaciones = [
   <p class="text-center mt-10 uppercase text-cafeoscuro font-bold">{t('pais.chile.accionEstatal', locale) || 'Acción estatal y entidades de apoyo en Chile:'}</p>
   
   <div class="container max-w-4xl mx-auto px-4 mt-8">
-    <div class="flex flex-col">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
       {ubicaciones.map((ubicacion) => (
         <Accordion 
           id={ubicacion.id}

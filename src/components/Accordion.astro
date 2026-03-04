@@ -9,14 +9,14 @@ interface Props {
 const { title, subtitle, content, id } = Astro.props;
 ---
 
-<div class="w-full bg-orange-300/20 rounded-[20px] mb-4 overflow-hidden" x-data="{ open: false }">
+<div class="w-full bg-verde rounded-[20px] mb-2 overflow-hidden" x-data="{ open: false }">
   <button 
     @click="open = !open"
-    class="w-full p-4 flex flex-col items-start justify-start rounded-[20px] focus:outline-none transition-colors cursor-pointer"
-    :class="open ? 'bg-orange-300/40' : 'bg-orange-300/20 hover:bg-orange-300/30'"
+    class="w-full p-2 md:pl-2 flex flex-col items-start justify-start rounded-[20px] focus:outline-none transition-colors cursor-pointer"
+    :class="open ? 'bg-verde/40' : 'bg-verde/20 hover:bg-verde/30'"
   >
     <div class="w-full flex justify-between items-center">
-      <span class="text-white text-base font-black font-['Geologica'] leading-5">{title}</span>
+      <span class="text-white text-base font-black font-['Geologica'] leading-5 p-3">{title}</span>
       <svg 
         class="w-6 h-6 text-white transition-transform duration-300" 
         :class="open ? 'rotate-180' : ''"
@@ -34,15 +34,10 @@ const { title, subtitle, content, id } = Astro.props;
   
   <div 
     x-show="open"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 max-h-0"
-    x-transition:enter-end="opacity-100 max-h-[500px]"
-    x-transition:leave="transition ease-in duration-200"
-    x-transition:leave-start="opacity-100 max-h-[500px]"
-    x-transition:leave-end="opacity-0 max-h-0"
+    x-collapse
     class="px-4 pb-4 overflow-hidden"
   >
-    <div class="w-full justify-start text-stone-600 text-lg font-normal font-['Geologica'] leading-6" set:html={content} />
+    <div class="text-stone-600 text-lg font-normal font-['Geologica'] leading-6" set:html={content} />
   </div>
 </div>
 
