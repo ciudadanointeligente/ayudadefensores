@@ -18,8 +18,8 @@ const locale = lang === 'pt' ? 'pt' : 'es';
 
 <Layout title={t('nav.inicio', locale)}>
 
-    <!-- Barra inicial -->
-   <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(/bg-ayudadefensores.png)] bg-cover relative">
+  <!-- Barra inicial -->
+  <section class="flex w-full h-50 md:h-90 place-items-center justify-center bg-[url(/bg-ayudadefensores.png)] bg-cover relative">
     <div class="text-center opacity-0 animate-slide-in">
       <p class="text-[22px] md:text-[24px] font-normal text-cafeoscuro">{t('index.banner.subtitulo', locale)}</p>
       <h1 class="text-3xl md:text-9xl font-extrabold text-cafemedio">{t('index.banner.titulo', locale)}</h1>
@@ -33,23 +33,22 @@ const locale = lang === 'pt' ? 'pt' : 'es';
   </section>
 
   <!-- Flecha -->
-  <section class="mt-15.5 flex justify-center -z-10">
+  <section class="mt-8 md:mt-15.5 flex justify-center -z-10">
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
       <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
     </svg>
   </section>
 
-
   <!-- Sección ayuda -->
   <section class="mt-12 flex justify-center">
     <div class="container max-w-6xl mx-auto px-4">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/3 text-center">
-          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.ayuda.titulo', locale)}</div>
+        <div class="w-full md:w-1/3 md:text-left text-center">
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro leading-16">{t('index.ayuda.titulo', locale)}</div>
           <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.ayuda.titulo2', locale)}</p>
         </div>
         <div class="w-full md:w-2/3 mt-4 md:mt-0">
-          <div class="bg-lime-200/40 rounded-lg p-6">
+          <div class="bg-lime-200/40 rounded-lg p-6 text-center md:text-left">
             <p class="text-cafeoscuro text-xl">{t('index.ayuda.descripcion', locale)}</p>
           </div>
         </div>
@@ -93,30 +92,27 @@ const locale = lang === 'pt' ? 'pt' : 'es';
   </section>
 
   <!-- Flecha -->
-  <section class="mt-15.5 flex justify-center -z-10">
+  <section class="mt-8 md:mt-15.5 flex justify-center -z-10">
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
       <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
     </svg>
   </section>
 
-
   <!-- Que es -->
   <section class="mt-12 flex justify-center">
     <div class="container max-w-6xl mx-auto px-4">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/2 md:text-left text-center">
-          <div class="text-2xl md:text-5xl font-normal text-cafeoscuro">{t('index.queEs.titulo', locale)}</div>
-          <p class="text-3xl md:text-7xl font-extrabold text-cafemedio">{t('index.queEs.titulo2', locale)}</p>
-          <p class="text-3xl md:text-5xl font-extrabold text-cafemedio">{t('index.queEs.titulo3', locale)}</p>
+        <div class="w-full md:w-1/2 md:text-left text-center ms-4 md:ms-0">
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.queEs.titulo', locale)}</div>
+          <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.queEs.titulo2', locale)}</p>
         </div>
         <div class="w-full md:w-1/2 mt-4 md:mt-0">
-          <div class="p-6 ml-20">
-            <div class="text-verde text-2xl md:text-5xl font-extrabold">{t('index.queEs.proposito', locale)}</div>
-            <p class="mt-4 text-cafeoscuro text-[20px] mr-10">{t('index.queEs.descripcion', locale)}</p>
-            <p class="mt-2 text-cafeoscuro text-[20px] font-bold">{t('index.queEs.queremos', locale)}</p>
-            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-wrap md:text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />{t('index.queEs.segura', locale)}</div>
-            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-wrap md:text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />{t('index.queEs.conectada', locale)}</div>
-            <div class="mt-2 text-cafemedio text-[20px] font-extrabold text-wrap md:text-nowrap flex items-center gap-2"><img src={heartIcon.src} alt="Heart" class="w-6 h-6" />{t('index.queEs.respaldada', locale)}</div>
+          <div class="md:ml-20 text-center md:text-left">
+            <div class="text-cafeoscuro text-md md:text-xl">{t('index.queEs.descripcion1', locale)} <span class="font-bold bg-amarillo px-1">{t('index.queEs.descripcion2', locale)}</span></div>
+            <p class="mt-4 text-cafeoscuro text-md md:text-xl font-bold">{t('index.queEs.queremos', locale)}</p>
+            <div class="mt-4 text-cafemedio text-md md:text-xl font-extrabold text-wrap md:text-nowrap">• {t('index.queEs.segura', locale)}</div>
+            <div class="mt-2 text-cafemedio text-md md:text-xl font-extrabold text-wrap md:text-nowrap">• {t('index.queEs.conectada', locale)}</div>
+            <div class="mt-2 text-cafemedio text-md md:text-xl font-extrabold text-wrap md:text-nowrap">• {t('index.queEs.respaldada', locale)}</div>
           </div>
         </div>
       </div>
@@ -124,7 +120,26 @@ const locale = lang === 'pt' ? 'pt' : 'es';
   </section>
 
   <!-- Flecha -->
-  <section class="mt-8 flex justify-center -z-10">
+  <section class="mt-8 md:mt-15.5 flex justify-center -z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
+      <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
+    </svg>
+  </section>
+
+  <!-- Escazú -->
+  <section class="mt-10 flex flex-col items-center">
+    <div class="text-center mb-8">
+      <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.escazu.titulo', locale)}</div>
+      <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.escazu.titulo2', locale)}</p>
+      <p class="text-xl md:text-xl font-normal text-cafeoscuro">{t('index.escazu.titulo3', locale)}</p>
+    </div>
+    <button class="uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition flex justify-center items-center">
+      {t('index.escazu.boton', locale)} 
+    </button>
+  </section>
+
+  <!-- Flecha -->
+  <section class="mt-8 md:mt-15.5 flex justify-center -z-10">
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="85" viewBox="0 0 12 85" fill="none">
       <path d="M5.77342 84.7735L11.5469 79L5.77342 73.2265L-8.35618e-05 79L5.77342 84.7735ZM5.77344 0L4.77344 -2.32254e-07L4.77342 79L5.77342 79L6.77342 79L6.77344 2.32254e-07L5.77344 0Z" fill="#818B3E"/>
     </svg>
@@ -135,24 +150,24 @@ const locale = lang === 'pt' ? 'pt' : 'es';
     <div class="text-center">
       <div class="flex justify-center">
         <div class="text-left">
-          <div class="text-2xl md:text-5xl font-normal text-cafeoscuro">{t('index.quien.titulo', locale)}</div>
-          <p class="text-3xl md:text-7xl font-extrabold text-cafemedio">{t('index.quien.titulo2', locale)}</p>
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.quien.titulo', locale)}</div>
+          <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.quien.titulo2', locale)}</p>
         </div>
       </div>
     </div>
-        <div class="container max-w-6xl mx-auto px-4 mt-10">
+    <div class="container max-w-6xl mx-auto px-4 mt-10">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/3 md:text-left">
+        <div class="w-full md:w-1/3 md:text-left text-center">
           <div class="text-md font-semibold text-cafeoscuro">{t('index.quien.proyectode', locale)}</div>
-          <div class="mt-2">
-            <img src={logoFCIVerde.src} alt="Logo FCI" class="w-70 h-auto" />
+          <div class="mt-2 flex justify-center md:justify-start">
+            <img src={logoFCIVerde.src} alt="Logo FCI" class="w-40 md:w-70 h-auto" />
           </div>
-      <button class="mt-4 uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition">
-        {t('index.quien.boton', locale)} 
-      </button>
+          <button class="w-full mt-4 uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition flex justify-center md:justify-start items-center md:w-auto">
+            {t('index.quien.boton', locale)} 
+          </button>
         </div>
         <div class="w-full md:w-2/3 mt-4 md:mt-0">
-          <div class="md:ml-4 bg-amber-300/10 rounded-lg p-6" id="quienes-somos-content">
+          <div class="md:ml-4 bg-amber-300/10 rounded-lg p-6 text-center md:text-left" id="quienes-somos-content">
             <span class="text-cafeoscuro">Cargando...</span>
           </div>
         </div>
@@ -161,26 +176,26 @@ const locale = lang === 'pt' ? 'pt' : 'es';
   </section>
 
   <script>
-    async function loadContent() {
-      const container = document.getElementById('quienes-somos-content');
-      if (!container) return;
-      
-      const lang = document.documentElement.lang === 'pt-BR' ? 'pt' : 'es';
-      
-      try {
-        const response = await fetch(`/api/quienes-somos/${lang}`);
-        if (response.ok) {
-          const html = await response.text();
-          container.innerHTML = html;
-        }
-      } catch (e) {
-        console.error('Error cargando contenido:', e);
+  async function loadContent() {
+    const container = document.getElementById('quienes-somos-content');
+    if (!container) return;
+
+    const lang = document.documentElement.lang === 'pt-BR' ? 'pt' : 'es';
+
+    try {
+      const response = await fetch(`/api/quienes-somos/${lang}`);
+      if (response.ok) {
+        const html = await response.text();
+        container.innerHTML = html;
       }
+    } catch (e) {
+      console.error('Error cargando contenido:', e);
     }
-    
-    loadContent();
-    
-    document.addEventListener('astro:page-load', loadContent);
+  }
+
+  loadContent();
+
+  document.addEventListener('astro:page-load', loadContent);
   </script>
 
 </Layout>

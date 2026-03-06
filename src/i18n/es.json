@@ -31,15 +31,20 @@
       "descripcion": "Si enfrentas riesgos, amenazas o hostigamiento por defender el ambiente, aquí puedes encontrar apoyo, información confiable y redes que pueden ayudarte."
     },
     "queEs": {
-      "titulo": "¿Qué es",
-      "titulo2": "AYUDA",
-      "titulo3": "DEFENSORES?",
-      "proposito": "PROPÓSITO",
-      "descripcion": "Proteger y empoderar a personas defensoras del ambiente en América Latina y el Caribe.",
-      "queremos": "Queremos que la defensa ambiental sea:",
-      "segura": "SEGURA",
-      "conectada": "CONECTADA",
-      "respaldada": "RESPALDADA EN CADA PAÍS"
+      "titulo": "¿Qué es Ayuda",
+      "titulo2": "DEFENSORES?",
+      "descripcion1": "Ayuda Defensores es un primer punto de contacto confiable para",
+      "descripcion2": "personas que defienden el ambiente y enfrentan riesgos en la región.",
+      "queremos": "Reúne en un sólo lugar:",
+      "segura": "Información clara y actualizada",
+      "conectada": "Herramientas prácticas de seguridad",
+      "respaldada": "Redes y organizaciones de apoyo"
+    },
+    "escazu": {
+      "titulo": "Infórmate sobre el",
+      "titulo2": "ACUERDO DE ESCAZÚ",
+      "titulo3": "Conoce por qué es clave para personas defensoras y revisa información actualizada a nivel regional.",
+      "boton": "Revisar información"
     },
     "quien": {
       "titulo": "¿Quién lo",
@@ -77,7 +82,6 @@
     "chile": {
       "titulo": "Chile",
       "descripcion": "Información de recursos y apoyo para defensores ambientales en Chile.",
-      "accionEstatal": "Acción estatal y entidades de apoyo en Chile:",
       "item1": "Organizaciones locales de apoyo",
       "item2": "Protocolos de protección",
       "item3": "Herramientas de autoprotección",
