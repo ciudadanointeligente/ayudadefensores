@@ -127,15 +127,21 @@ const locale = lang === 'pt' ? 'pt' : 'es';
   </section>
 
   <!-- Escazú -->
-  <section class="mt-10 flex flex-col items-center">
-    <div class="text-center mb-8">
-      <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.escazu.titulo', locale)}</div>
-      <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.escazu.titulo2', locale)}</p>
-      <p class="text-xl md:text-xl font-normal text-cafeoscuro">{t('index.escazu.titulo3', locale)}</p>
+  <section class="mt-10 flex justify-center">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-8">
+          <div class="text-4xl md:text-5xl font-normal text-cafeoscuro">{t('index.escazu.titulo', locale)}</div>
+          <p class="text-5xl md:text-7xl font-extrabold text-cafemedio">{t('index.escazu.titulo2', locale)}</p>
+          <div class="pt-2 flex w-2/3 text-center mx-auto">
+            <p class="text-xl md:text-xl font-normal text-cafeoscuro">{t('index.escazu.titulo3', locale)}</p>
+          </div>
+        </div>
+        <button class="uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition flex justify-center items-center">
+          <a href={`/${lang}/apoyo`}>{t('index.escazu.boton', locale)}</a>
+        </button>
+      </div>
     </div>
-    <button class="uppercase bg-cafeoscuro text-white font-bold text-xs md:text-[18px] px-2 py-2 md:px-6 md:py-4 rounded-full hover:bg-cafeclaro transition flex justify-center items-center">
-      {t('index.escazu.boton', locale)} 
-    </button>
   </section>
 
   <!-- Flecha -->

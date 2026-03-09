@@ -1,0 +1,230 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'pt' } },
+  ];
+}
+
+import Layout from '../../layouts/Layout-paises.astro';
+import { t } from '../../i18n/utils.ts';
+
+const { lang } = Astro.params;
+const locale = lang === 'pt' ? 'pt' : 'es';
+const homeUrl = locale === 'pt' ? '/pt/' : '/';
+
+const paises = [
+  { id: 'mexico', nombre: locale === 'pt' ? 'México' : 'México' },
+  { id: 'colombia', nombre: locale === 'pt' ? 'Colômbia' : 'Colombia' },
+  { id: 'brasil', nombre: locale === 'pt' ? 'Brasil' : 'Brasil' },
+  { id: 'argentina', nombre: locale === 'pt' ? 'Argentina' : 'Argentina' },
+  { id: 'peru', nombre: locale === 'pt' ? 'Peru' : 'Perú' },
+  { id: 'uruguay', nombre: locale === 'pt' ? 'Uruguai' : 'Uruguay' }
+];
+
+const mexicoInfo = {
+  titulo: 'México',
+  descripcion: 'Texto explicativo que presente estos datos de teléfono, correo y dirección.',
+  telefono: '01 800 800 40 50 / 01 55 5209 88 00 ext. 30863',
+  correo: 'mecanismo@segob.gob.mx',
+  direccion: 'Calle Dinamarca número 84, piso 7, colonia Juárez, Delegación Cuauhtémoc, Ciudad de México. C. P. 06600.',
+  mapa: '/mapa-mexico.webp',
+  grupos: [
+    { id: 'defensores', nombre: locale === 'pt' ? 'Pessoas defensoras de direitos humanos' : 'Personas defensoras de derechos humanos' },
+    { id: 'periodistas', nombre: locale === 'pt' ? 'Jornalistas' : 'Periodistas' }
+  ],
+  mecanismos: [
+    { titulo: locale === 'pt' ? 'proteção' : 'protección', descripcion: locale === 'pt' ? 'Mecanismos de' : 'Mecanismos de', pregunta: locale === 'pt' ? 'como ativar o?' : '¿Cómo activar el?' }
+  ],
+  ubicaciones: [
+    {
+      id: 'aguascalientes',
+      titulo: 'Aguascalientes',
+      entidad: 'Comisión Estatal de Derechos Humanos',
+      direccion: 'Perú 502, Fracc. Jardines de Santa Elena, Col. República de Perú # 502 C.P: 20236, Ags. México.',
+      telefono: '01(449) 1407855 / 01(449) 140 7860 / 01(449) 804 0165',
+      correo: 'correo@dhags.org'
+    },
+    {
+      id: 'cdmx',
+      titulo: 'Ciudad de México',
+      entidad: 'Comisión de Derechos Humanos de la Ciudad de México',
+      direccion: 'Av. Universidad #1449, PB, Col. Del Valle, Benito Juárez, Ciudad de México.',
+      telefono: '01(55) 5209 8800',
+      correo: 'cdhcdmx@cdhcm.org'
+    },
+    {
+      id: 'jalisco',
+      titulo: 'Jalisco',
+      entidad: 'Comisión Estatal de Derechos Humanos de Jalisco',
+      direccion: 'Pedro Moreno #1615, Col. Americana, Guadalajara, Jalisco.',
+      telefono: '01(33) 3669 7000',
+      correo: 'contacto@cedhj.org.mx'
+    },
+    {
+      id: 'nuevoleon',
+      titulo: 'Nuevo León',
+      entidad: 'Comisión de Derechos Humanos de Nuevo León',
+      direccion: 'Alfonso Reyes #1500, Col. Mitras Centro, Monterrey, N.L.',
+      telefono: '01(81) 2020 5000',
+      correo: 'cdhnl@cdhnl.gob.mx'
+    },
+    {
+      id: 'puebla',
+      titulo: 'Puebla',
+      entidad: 'Comisión de Derechos Humanos de Puebla',
+      direccion: '11 Sur #1104, Col. Centro Histórico, Puebla, Puebla.',
+      telefono: '01(222) 229 9000',
+      correo: 'cdhpuebla@cdhpuebla.org.mx'
+    },
+    {
+      id: 'guanajuato',
+      titulo: 'Guanajuato',
+      entidad: 'Comisión de Derechos Humanos del Estado de Guanajuato',
+      direccion: 'Blvd. José J. N. #2410, Col. San José, Guanajuato, Gto.',
+      telefono: '01(473) 735 2100',
+      correo: 'cdhg@cdhgto.org.mx'
+    },
+    {
+      id: 'guerrero',
+      titulo: 'Guerrero',
+      entidad: 'Comisión de Derechos Humanos del Estado de Guerrero',
+      direccion: 'Av. Ruffo Figueroa #6, Col. San Rafael, Chilpancingo, Gro.',
+      telefono: '01(747) 471 6900',
+      correo: 'cdhg@cdhgro.org.mx'
+    },
+    {
+      id: 'veracruz',
+      titulo: 'Veracruz',
+      entidad: 'Comisión Veracruzana de Derechos Humanos',
+      direccion: 'Av. Manuel Ávila Camacho #191, Col. Centro, Xalapa, Ver.',
+      telefono: '01(228) 841 7700',
+      correo: 'conciliacion@cvdh.org.mx'
+    }
+  ]
+};
+---
+
+<Layout title={t('nav.apoyoPorPais', locale)}>
+
+  <!-- Barra inicial -->
+  <section class="flex w-full h-auto md:h-60 bg-[url(/bg-ayudadefensores.png)] bg-cover relative py-2 md:py-0">
+    <div class="absolute inset-0 bg-cover -z-10"></div>
+    <div class="w-full px-4 flex flex-col items-center gap-4 pt-16 pb-6 md:hidden">
+      <span class="w-fit inline-block rounded-2xl px-4 py-1 bg-white text-verde text-[12px] font-medium uppercase"><a href={homeUrl} class="hover:text-cafemedio">{t('nav.inicio', locale)}</a> / {t('nav.apoyoPorPais', locale)}</span>
+      <h1 class="text-3xl font-extrabold text-cafemedio text-center">{t('apoyo.titulo', locale)}</h1>
+      <p class="text-cafeoscuro text-base font-medium text-center leading-relaxed">{t('apoyo.descripcion', locale)}</p>
+    </div>
+    <div class="hidden md:flex absolute md:left-[150px] md:mt-4 top-1/3 -translate-y-1/2 w-[calc(100%-150px)] pr-8 flex flex-col gap-8">
+      <span class="w-fit inline-block rounded-2xl px-4 py-1 bg-white text-verde text-[12px] font-medium uppercase"><a href={homeUrl} class="hover:text-cafemedio">{t('nav.inicio', locale)}</a> / {t('nav.apoyoPorPais', locale)}</span>
+      <div class="flex items-start">
+        <h1 class="text-6xl font-extrabold text-cafemedio w-[450px] flex-shrink-0 whitespace-nowrap">{t('apoyo.titulo', locale)}</h1>
+        <p class="text-cafeoscuro text-lg font-medium max-w-2xl text-left leading-relaxed ml-[300px]">{t('apoyo.descripcion', locale)}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buscador por países -->
+  <div class="container max-w-7xl mx-auto px-4 min-h-[600px]">
+     <div class="flex flex-wrap gap-3 justify-center py-8">
+     <div class="text-cafeoscuro text-lg font-semibold mt-1 mr-2">{t('apoyo.seleccionarPais', locale)}</div> {paises.map((pais) => (
+      <button
+        hx-get={`/${lang}/paises-parciales/${pais.id}`}
+        hx-target="#contenido-pais"
+        hx-swap="innerHTML transition:true"
+        class="px-5 py-2 bg-cafeoscuro text-white text-sm font-black uppercase rounded-[34.60px] hover:bg-amber-600 transition cursor-pointer"
+      >
+        {pais.nombre}
+      </button>
+      ))}
+    </div>
+
+    <!-- Contenido del país: 1/3 info izquierda, 2/3 regiones derecha -->
+    <div id="contenido-pais" class="w-full">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- 1/3: Info del país (izquierda) -->
+        <div class="w-full md:w-1/3">
+          <div class="w-80 h-36 bg-lime-200/30 rounded-[20px] p-4"></div>
+          <div class="w-80 h-24 bg-lime-200/30 rounded-[20px] mt-4 p-4"></div>
+          
+          <div class="mt-6">
+            <div class="w-48 text-stone-600 text-xl font-black uppercase leading-6">Apoyo Estatal en:</div>
+          </div>
+          
+          <div class="mt-2">
+            <div class="text-amber-600 text-7xl font-black uppercase leading-[77.49px]">{mexicoInfo.titulo}</div>
+          </div>
+          
+          <div class="mt-4 space-y-2">
+            {mexicoInfo.grupos.map((grupo) => (
+              <div class="text-stone-500 text-lg font-bold leading-6">{grupo.nombre}</div>
+            ))}
+          </div>
+          
+          <div class="mt-8">
+            <div class="text-stone-500 text-4xl font-extrabold uppercase leading-10">{mexicoInfo.mecanismos[0].pregunta.replace('¿', '').replace('?', '')}</div>
+            <div class="text-stone-600 text-2xl font-medium leading-7">{mexicoInfo.mecanismos[0].descripcion}</div>
+            <div class="text-stone-500 text-4xl font-extrabold uppercase leading-10 mt-2">{mexicoInfo.mecanismos[0].titulo}</div>
+            <div class="text-stone-600 text-2xl font-medium leading-7">{mexicoInfo.mecanismos[0].descripcion}</div>
+          </div>
+          
+          <div class="mt-6 w-9 h-9">
+            <div class="w-8 h-7 outline outline-[3.17px] outline-offset-[-1.58px] outline-stone-500"></div>
+          </div>
+          <div class="mt-2 w-9 h-9">
+            <div class="w-8 h-7 outline outline-[3.17px] outline-offset-[-1.58px] outline-stone-500"></div>
+          </div>
+          
+          <div class="mt-4 w-72 text-stone-600 text-lg font-normal leading-6">
+            Texto explicativo o de bajada a la pregunta que complemente.
+          </div>
+        </div>
+        
+        <!-- 2/3: Info central del país y mapa -->
+        <div class="w-full md:w-2/3">
+          <!-- Info central: texto, teléfono, correo -->
+          <div class="w-full mb-8">
+            <div class="w-full text-stone-600 text-lg font-normal leading-6 mb-6">
+              {mexicoInfo.descripcion}
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+              <div class="w-full md:w-1/2">
+                <div class="text-amber-600 text-lg font-black mb-2">Teléfono:</div>
+                <div class="text-stone-600 text-lg font-normal">{mexicoInfo.telefono}</div>
+              </div>
+              <div class="w-full md:w-1/2">
+                <div class="text-amber-600 text-lg font-black mb-2">Correo:</div>
+                <div class="text-stone-600 text-lg font-normal underline">{mexicoInfo.correo}</div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <div class="text-amber-600 text-lg font-black mb-2">Dirección:</div>
+              <div class="text-stone-600 text-lg font-normal">{mexicoInfo.direccion}</div>
+            </div>
+          </div>
+          
+          <!-- Imagen del mapa -->
+          <div class="w-full">
+            <img 
+              src={mexicoInfo.mapa} 
+              alt={`Mapa de ${mexicoInfo.titulo}`}
+              class="w-full h-auto rounded-[20px]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
+  </style>
+</Layout>
